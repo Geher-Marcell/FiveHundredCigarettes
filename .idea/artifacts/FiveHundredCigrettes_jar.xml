@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FiveHundredCigrettes:jar">
+    <output-path>$PROJECT_DIR$/../../../srv/plugins</output-path>
+    <root id="archive" name="FiveHundredCigrettes.jar">
+      <element id="module-output" name="FiveHundredCigrettes" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,4 @@
+name: FiveHundredCigrettes
+version: '${project.version}'
+main: l10.dev.fivehundredcigrettes.FiveHundredCigrettes
+api-version: '1.20'
