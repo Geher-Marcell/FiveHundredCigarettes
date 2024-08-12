@@ -30,7 +30,7 @@ public class SpawnEggInteract implements Listener {
 
         if(ts.sheep == null) return;
 
-        FiveHundredCigrettes.getPlugin().sheepMap.put(spawnLocation, ts);
+        TobaccoSheep.sheepMap.put(spawnLocation, ts);
 
         if(p.getGameMode() != org.bukkit.GameMode.CREATIVE){
             p.getInventory().getItemInMainHand().setAmount(p.getInventory().getItemInMainHand().getAmount() - 1);

@@ -1,6 +1,5 @@
 package l10.dev.listeners;
 
-import l10.dev.fivehundredcigrettes.FiveHundredCigrettes;
 import l10.dev.fivehundredcigrettes.TobaccoSheep;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
@@ -12,11 +11,11 @@ public class EntityDeath implements Listener {
     @EventHandler
     public void onEntityDeath(EntityDeathEvent e) {
         Entity ent = e.getEntity();
-        if(!TobaccoSheep.isTobaccoSheep(ent)) return;
+        if(!TobaccoSheep.IsTobaccoSheep(ent)) return;
 
         e.setCancelled(true);
 
-        FiveHundredCigrettes.getPlugin().sheepMap.remove(ent.getLocation());
+        TobaccoSheep.sheepMap.remove(ent.getLocation());
 
         ent.remove();
     }
