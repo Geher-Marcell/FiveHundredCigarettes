@@ -16,7 +16,9 @@ import java.util.Map;
 
 public final class FiveHundredCigrettes extends JavaPlugin {
 
-    public static FiveHundredCigrettes plugin;
+    private static FiveHundredCigrettes plugin;
+
+    TobaccoItem tobaccoItem;
 
     @Override
     public void onEnable() {
@@ -31,8 +33,9 @@ public final class FiveHundredCigrettes extends JavaPlugin {
         getCommand("spawnegg").setExecutor(new SpawnEgg());
 
         TobaccoSheep.LoadSheep();
-
         TobaccoSheep.SheepRunnable();
+
+        tobaccoItem = new TobaccoItem();
     }
 
     @Override

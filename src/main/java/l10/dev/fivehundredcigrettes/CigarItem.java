@@ -10,9 +10,9 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.StonecuttingRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 
-public class TobaccoItem {
+public class CigarItem {
 
-    private static final String TobaccoKey = "tobacco";
+    public static final String TobaccoKey = "tobacco";
 
     private static final String CustomNBT = "isTobacco"; //The custom NBT tag to identify the item
     private static final String DisplayName = "Tobacco"; //The display name of the item
@@ -21,7 +21,7 @@ public class TobaccoItem {
 
     public static ItemStack Tobacco;
 
-    public TobaccoItem() {
+    public CigarItem() {
         if(Tobacco != null) return;
 
         NamespacedKey dkey = new NamespacedKey(FiveHundredCigrettes.getPlugin(), TobaccoKey);
