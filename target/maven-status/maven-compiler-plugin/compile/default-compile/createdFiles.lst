@@ -1,2 +1,8 @@
+l10\dev\listeners\NoOffhandCig.class
 l10\dev\listeners\EntityDeath.class
-l10\dev\fivehundredcigrettes\TobaccoItem.class
+l10\dev\listeners\PlayerJoin.class
+l10\dev\items\MyItem.class
+l10\dev\items\EggItem.class
+l10\dev\items\StubItem.class
+l10\dev\items\CigarItem.class
+l10\dev\items\TobaccoItem.class

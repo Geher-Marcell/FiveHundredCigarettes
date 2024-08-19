@@ -6,6 +6,8 @@ import org.bukkit.Location;
 import org.bukkit.Tag;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Sheep;
+import org.bukkit.loot.LootContext;
+import org.bukkit.loot.LootTable;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
@@ -46,7 +48,7 @@ public class TobaccoSheep {
         sheep.setSilent(true);
         sheep.setCustomNameVisible(true);
         sheep.setAI(false);
-        sheep.setCollidable(false);
+        sheep.setNoPhysics(true);
         sheep.setPersistent(true);
         sheep.setRemoveWhenFarAway(false);
         sheep.setBaby();

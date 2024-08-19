@@ -1,8 +1,6 @@
 package l10.dev.listeners;
 
-import l10.dev.fivehundredcigrettes.TobaccoItem;
 import l10.dev.fivehundredcigrettes.TobaccoSheep;
-import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,7 +13,6 @@ public class EntityDeath implements Listener {
         if(!TobaccoSheep.IsTobaccoSheep(ent)) return;
 
         e.getDrops().clear();
-
 
         TobaccoSheep.sheepMap.remove(ent.getLocation());
     }
