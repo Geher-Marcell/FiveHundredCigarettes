@@ -126,28 +126,26 @@ public final class FiveHundredCigrettes extends JavaPlugin {
     private void CreateSettings() {
         if(getConfig().contains(SETPATH)) return;
 
-        Bukkit.broadcastMessage("Setting config!");
-
         getConfig().set(SETPATH + ".enableSheep", true);
 
-        getConfig().set(SETPATH + ".tobacco.Name", "Tobacco"); //
-        getConfig().set(SETPATH + ".tobacco.Item", Material.BROWN_DYE.name()); //
-        getConfig().set(SETPATH + ".tobacco.craftItem", Material.BROWN_MUSHROOM.name()); //
+        getConfig().set(SETPATH + ".tobacco.Name", "Tobacco");
+        getConfig().set(SETPATH + ".tobacco.Item", Material.BROWN_DYE.name());
+        getConfig().set(SETPATH + ".tobacco.craftItem", Material.BROWN_MUSHROOM.name());
+        getConfig().set(SETPATH + ".tobacco.Lore", "");
 
-        getConfig().set(SETPATH + ".cigarette.Name", "Cigarette"); //
-        getConfig().set(SETPATH + ".cigarette.Lore", "");//
-        getConfig().set(SETPATH + ".cigarette.hurtChance", 0.05); //
-        getConfig().set(SETPATH + ".cigarette.hurtDamage", 0.5); //
+        getConfig().set(SETPATH + ".cigarette.Name", "Cigarette");
+        getConfig().set(SETPATH + ".cigarette.Lore", "");
+        getConfig().set(SETPATH + ".cigarette.hurtChance", 0.05);
+        getConfig().set(SETPATH + ".cigarette.hurtDamage", 0.5);
 
-        getConfig().set(SETPATH + ".stub.Name", "Stub"); //
-        getConfig().set(SETPATH + ".stub.CanCraftWith", "true");
-        getConfig().set(SETPATH + ".stub.Item", Material.BLACK_DYE.name()); //
-        getConfig().set(SETPATH + ".stub.Lore", "Throw me in the trash pleawse :3"); //
+        getConfig().set(SETPATH + ".stub.Name", "Stub");
+        getConfig().set(SETPATH + ".stub.Item", Material.BLACK_DYE.name());
+        getConfig().set(SETPATH + ".stub.Lore", "Throw me in the trash pleawse :3");
 
-        getConfig().set(SETPATH + ".egg.Name", "Egg"); //
-        getConfig().set(SETPATH + ".egg.Lore", "Spawn a sheep who has tobacco instead of wool!"); //
-        getConfig().set(SETPATH + ".egg.SheepDrops", 0); //
-        getConfig().set(SETPATH + ".egg.PlaceDistance", 1f); //
+        getConfig().set(SETPATH + ".egg.Name", "Egg");
+        getConfig().set(SETPATH + ".egg.Lore", "Spawn a sheep who has tobacco instead of wool!");
+        getConfig().set(SETPATH + ".egg.SheepDrops", 0);
+        getConfig().set(SETPATH + ".egg.PlaceDistance", 1f);
 
         saveConfig();
     }
