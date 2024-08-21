@@ -1,10 +1,7 @@
 # 1.20.4 Minecraft Spigot plugin
 
-### This plugin is a joke. Don't take it seriously.
-
-
 ## What is this plugin?
-This plugin adds tobacco and cigarettes to the game. You can use it to puff smokes or smug it into your friend's country.
+This plugin adds smoking to vanilla minecraft.
 
 
 ## How to use it
@@ -47,6 +44,8 @@ PAPER | OAK_LEAVES | PAPER
 pls dont judge my code :D
 
 ## Future plans
+- Review and comment on code
+- Port to 1.21
 - Custom achievements
 - Lung cancer
 - More items
