@@ -1,11 +1,7 @@
 package l10.dev.items;
 
 import l10.dev.fivehundredcigrettes.FiveHundredCigrettes;
-import l10.dev.items.MyItem;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.Particle;
-import org.bukkit.Sound;
+import org.bukkit.*;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -61,9 +57,13 @@ public class CigarItem extends MyItem implements Listener {
 
         //Damage player
 
-        if(Math.random() < 0.05){
-            p.damage(0.5);
+        if(Math.random() < FiveHundredCigrettes.getPlugin().getConfig().getDouble(FiveHundredCigrettes.SETPATH + ".cigarette.hurtChance")){
+            p.damage(FiveHundredCigrettes.getPlugin().getConfig().getDouble(FiveHundredCigrettes.SETPATH + ".cigarette.hurtAmount"));
             p.getWorld().playSound(p.getLocation(), Sound.ENTITY_VILLAGER_HURT, 1, .81f);
+
+            if(p.isDead()){
+                Bukkit.broadcastMessage("Kopogtat a tüdőrák!"); //TODO Achievement
+            }
         }
     }
 }

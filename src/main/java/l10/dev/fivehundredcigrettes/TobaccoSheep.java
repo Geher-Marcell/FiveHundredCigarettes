@@ -3,15 +3,11 @@ package l10.dev.fivehundredcigrettes;
 import org.bukkit.Bukkit;
 import org.bukkit.DyeColor;
 import org.bukkit.Location;
-import org.bukkit.Tag;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Sheep;
-import org.bukkit.loot.LootContext;
-import org.bukkit.loot.LootTable;
 import org.bukkit.scheduler.BukkitRunnable;
 import org.bukkit.scheduler.BukkitTask;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,15 +26,8 @@ public class TobaccoSheep {
         this(loc, loc.getWorld().spawn(loc, Sheep.class), 0, 1);
     }
 
-    /**
-     * Constructor for loading sheep from config
-     * @param loc Location of the sheep*
-     * @param a Age of the sheep
-     * @param h Health of the sheep
-     * @param s Sheep entity
-     */
     public TobaccoSheep(Location loc, Sheep s, int a, int h){
-        if(!FiveHundredCigrettes.NearbyEntities(loc, 1, s).isEmpty()) {
+        if(!FiveHundredCigrettes.NearbyEntities(loc, FiveHundredCigrettes.getPlugin().getConfig().getDouble(FiveHundredCigrettes.SETPATH+".egg.PlaceDistance"), s).isEmpty()) {
             s.remove();
             sheepMap.remove(s.getLocation());
             return;
@@ -107,7 +96,7 @@ public class TobaccoSheep {
                     }
                 }
             }
-        }.runTaskTimer(FiveHundredCigrettes.getPlugin(), 0, 1); //Repeats every second
+        }.runTaskTimer(FiveHundredCigrettes.getPlugin(), 0, 20L); //Repeats every second
 
         return mainTask;
     }
@@ -137,7 +126,6 @@ public class TobaccoSheep {
     /// Save the sheep to the config from the hashmap
     /// </summary>
     public static void SaveSheepConfig(){
-        Bukkit.broadcastMessage("Saving sheep");
         FiveHundredCigrettes.getPlugin().getConfig().set("sheep", null); //Remove all previous config
         int i = 0;
         for(Map.Entry<Location, TobaccoSheep> entry : TobaccoSheep.sheepMap.entrySet()){

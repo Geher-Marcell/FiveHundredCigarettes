@@ -9,12 +9,16 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class PlayerJoin implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent e){
-        for (NamespacedKey k : FiveHundredCigrettes.cigarItem.GetRecipeKeys()) {
-            e.getPlayer().discoverRecipe(k);
+        if(FiveHundredCigrettes.cigarItem != null){
+            for (NamespacedKey k : FiveHundredCigrettes.cigarItem.GetRecipeKeys()) {
+                e.getPlayer().discoverRecipe(k);
+            }
         }
 
-        for (NamespacedKey k : FiveHundredCigrettes.eggItem.GetRecipeKeys()) {
-            e.getPlayer().discoverRecipe(k);
+        if(FiveHundredCigrettes.eggItem != null) {
+            for (NamespacedKey k : FiveHundredCigrettes.eggItem.GetRecipeKeys()) {
+                e.getPlayer().discoverRecipe(k);
+            }
         }
     }
 }

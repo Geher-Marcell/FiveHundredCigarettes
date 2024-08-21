@@ -1,5 +1,6 @@
 package l10.dev.items;
 
+import l10.dev.fivehundredcigrettes.FiveHundredCigrettes;
 import l10.dev.fivehundredcigrettes.TobaccoSheep;
 import org.bukkit.Location;
 import org.bukkit.Material;
